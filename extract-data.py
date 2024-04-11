@@ -7,8 +7,9 @@ s3 = boto3.client('s3', aws_access_key_id='your id', aws_secret_access_key='your
 bucket_name = 'demo-parquet-dex'
 bsc_key='bsc/2020-09-12_425000_7BE703446B28941F_5000.parquet'
 
-bsc_local_path = '/Users/divyasshree/Downloads/sample.parquet'
+bsc_local_path = '/Users/divyasshree/Downloads/2020-09-12_425000_7BE703446B28941F_5000.parquet'
 file_obj = s3.download_file(bucket_name, bsc_key, bsc_local_path)
+
 
 compressed_data = open(bsc_local_path, 'rb').read()
 
